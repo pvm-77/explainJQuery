@@ -239,6 +239,39 @@ Overall, while JavaScript and jQuery have some similarities in terms of function
 
 ## jQuery Events
 
+  **dom content load using jquery[what is ready function ]?**
+  In JavaScript, `$(function{})` is a shorthand notation for the `$(document).ready()` method, which is used to specify a function to be executed when the document is fully loaded and ready to be manipulated by JavaScript.
+  The syntax of $(function{}) is as follows:
+  ```js
+  // recommeded way
+  $(function(){
+  // code to be executed after the document is fully loaded
+});
+
+// above code is short hand of below
+$(document).ready(function() {
+  // code to be executed when the DOM content is loaded
+});
+
+
+
+```
+
+This notation is often used in jQuery code to ensure that the code inside the function is executed only after the document has finished loading.
+
+An alternative to `$(function{})` in modern JavaScript is to use the DOMContentLoaded event. This event is fired when the document has been parsed and the DOM tree is fully constructed, but external resources like images and stylesheets may not have been fully loaded.
+
+Here is an example of using the `DOMContentLoaded` event:
+```js
+document.addEventListener("DOMContentLoaded", function() {
+  // code to be executed when the document is ready
+});
+
+```
+This alternative approach does not require jQuery and can be used in modern browsers that support the `addEventListener()` method.
+
+
+
 🎉 How do you bind a click event to an element using jQuery?
 
 🎉 How do you prevent the default action of an event using jQuery?
